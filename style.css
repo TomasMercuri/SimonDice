@@ -1,0 +1,199 @@
+*{
+    font-family: sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+body{
+    height: 100vh;
+    background: #fff;
+}
+
+.container { 
+    color: #000;
+    height: 100vh;
+}
+
+.container .titulo {
+    text-align: center;
+    padding: 2rem 0;
+    height: 10vh;
+}
+
+.container .titulo h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: inherit;
+}
+
+.container .nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    height: 8vh;
+    padding: 1rem 0;
+    box-sizing: content-box;
+}
+
+.container .nav-container p,
+.container .nav-container span {
+    font-size: 2.4rem;
+}
+
+.container .nav-container .mensaje {
+    text-align: center;
+}
+
+
+.container .juego-container{
+    width: 100%;
+    height: calc(100vh - 20vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .juego{
+    width: 100vh;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.container .juego .cuadro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.container .juego .cuadro-1{
+    background: #7f8;   
+    border-top-left-radius: 100%;
+
+    border-top: 2rem solid black;
+    border-right: 1rem solid black;
+    border-bottom: 1rem solid black;
+    border-left: 2rem solid black;
+}
+
+.container .juego .cuadro-2{
+    background: #f44;
+    border-top-right-radius: 100%;
+    
+    border-top: 2rem solid black;
+    border-right: 2rem solid black;
+    border-bottom: 1rem solid black;
+    border-left: 1rem solid black;
+}
+
+.container .juego .cuadro-3{
+    background: #ff8;
+    border-bottom-left-radius: 100%;
+    
+    border-top: 1rem solid black;
+    border-right: 1rem solid black;
+    border-bottom: 2rem solid black;
+    border-left: 2rem solid black;
+}
+
+.container .juego .cuadro-4{
+    background: #08f;
+    border-bottom-right-radius: 100%;
+    
+    border-top: 1rem solid black;
+    border-right: 2rem solid black;
+    border-bottom: 2rem solid black;
+    border-left: 1rem solid black;
+}
+
+
+
+.container .juego .cuadro-1.resaltado{
+    background: #0f0;
+}
+
+.container .juego .cuadro-2.resaltado{
+    background: #f00;
+}
+
+.container .juego .cuadro-3.resaltado{
+    background: #ff0;
+}
+
+.container .juego .cuadro-4.resaltado{
+    background: #00f;
+}
+
+.container .juego .cuadro.resaltado {
+    border: 1rem solid black;
+    opacity: 1;
+}
+
+
+.container .contador-rondas{
+    background: #fff;
+    border-radius: 50%;
+    padding: 3rem 2rem;
+    border: 2rem solid #333;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    gap: 2rem;
+}
+
+.container .contador-rondas p,
+.container .contador-rondas span{
+    font-size: 2.4rem;
+    user-select: none;
+    text-align: center;
+}
+
+
+.container .contador-rondas button{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+    background: #000;
+    color: #fff;
+}
+
+
+
+@media (max-width: 800px){
+    *{
+        font-size: 8px;
+    }
+
+    .container .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .container .juego{
+        width: 80vh;
+        height: 70%;
+    }
+
+    .container .contador-rondas {
+        padding: 2rem 1rem;
+    }
+}
